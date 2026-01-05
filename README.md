@@ -23,7 +23,7 @@ A lightweight Chrome extension that hides low-engagement spam replies on X (Twit
    - Open Chrome and go to `chrome://extensions/`
    - Enable "Developer mode" (toggle in top right)
    - Click "Load unpacked"
-   - Select the `aiFilter` folder
+   - Select the `x-spam-filter` folder
 
 3. **Done!** The extension is now active on X/Twitter.
 
