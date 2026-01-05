@@ -9,7 +9,7 @@
 ## ⚡ Quick Install (2 minutes)
 
 ### Step 1: Download
-👉 **[Download ZIP](../../archive/refs/heads/main.zip)** and unzip it to a folder
+👉 **[Download ZIP](https://github.com/samith01/x-spam-filter/archive/refs/heads/master.zip)** and unzip it to a folder
 
 ### Step 2: Add to Chrome
 1. Open Chrome and go to **`chrome://extensions`**
