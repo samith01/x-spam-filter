@@ -1,86 +1,75 @@
-# X Spam Filter - Chrome Extension
+# 🛡️ X Spam Filter
 
-A lightweight Chrome extension that hides low-engagement spam replies on X (Twitter) using pure client-side pattern matching. No API calls, no AI detection, just smart rules.
+**Clean up your replies.** A free Chrome extension that automatically hides spam comments on your X posts — bots, generic praise, emoji spam, and low-effort replies.
 
-## Features
+![Client-Side](https://img.shields.io/badge/100%25-Client--Side-1D9BF0?style=flat-square) ![No API](https://img.shields.io/badge/No-API%20Calls-green?style=flat-square) ![Privacy](https://img.shields.io/badge/Privacy-First-purple?style=flat-square)
 
-- 🛡️ **Auto-runs** on x.com and twitter.com
-- 📏 **Pattern Matching Rules:**
-  - Short replies (< 15 words)
-  - Hashtag spam (> 20% hashtags)
-  - Generic replies (no personal pronouns)
-  - Empty praise + emoji spam
-- �� **Daily counter** tracks hidden spam
-- 🔽 **Click to reveal** hidden replies
-- ⚙️ **Adjustable sensitivity** (Low/Medium/High)
-- 🌙 **Dark mode support**
+---
 
-## Installation
+## ⚡ Quick Install (2 minutes)
 
-1. **Clone or download** this repository
+### Step 1: Download
+👉 **[Download ZIP](../../archive/refs/heads/main.zip)** and unzip it to a folder
 
-2. **Load in Chrome:**
-   - Open Chrome and go to `chrome://extensions/`
-   - Enable "Developer mode" (toggle in top right)
-   - Click "Load unpacked"
-   - Select the `x-spam-filter` folder
+### Step 2: Add to Chrome
+1. Open Chrome and go to **`chrome://extensions`**
+2. Turn ON **"Developer mode"** (top right corner)
+3. Click **"Load unpacked"**
+4. Select the unzipped folder
 
-3. **Done!** The extension is now active on X/Twitter.
+### Step 3: Done!
+Visit any post on X — spam replies are automatically hidden. You'll see a **"Hide Spam"** toggle on posts with a count of filtered replies.
 
-## How It Works
+---
 
-### Spam Detection Rules
+## 🎯 What It Filters
 
-Each reply is scored based on these patterns:
+| Spam Type | Example |
+|-----------|---------|
+| 🤖 Generic praise | "Amazing! 🔥🔥🔥" |
+| #️⃣ Hashtag spam | "#crypto #money #follow #win" |
+| 📝 Empty replies | "Great post!" "Love this!" |
+| 😀 Emoji floods | "🚀🚀🚀🔥🔥💯💯" |
+| 🎣 Engagement bait | Short generic comments fishing for attention |
 
-| Rule | Points | Description |
-|------|--------|-------------|
-| Short text | +1 | Less than 15 words |
-| Hashtag spam | +1 | More than 20% of words are hashtags |
-| No pronouns | +1 | Missing personal words (I, you, my, we, etc.) |
-| Generic praise | +1 | Words like "amazing", "great" + 3+ emojis |
-| Emoji spam | +0.5 | 5 or more emojis |
-| Short praise | +0.5 | Very short (≤5 words) with praise words |
+---
 
-### Sensitivity Levels
+## 🎛️ Features
 
-- **Low:** Only obvious spam (hashtag spam, very short + high score)
-- **Medium:** Score ≥ 2 points → Hide
-- **High:** Score ≥ 1.5 points → Hide
+- **Auto-runs** on x.com — no setup needed
+- **Toggle visibility** — show/hide spam with one click
+- **Adjustable sensitivity** — Low, Medium, or High filtering
+- **Daily counter** — see how much spam was blocked
+- **Click to reveal** — view any hidden reply if needed
 
-## Files
+---
 
-```
-aiFilter/
-├── manifest.json     # Extension configuration
-├── content.js        # Main spam detection logic
-├── popup.html        # Settings popup UI
-├── popup.js          # Popup functionality
-├── styles.css        # Styling for hidden replies & spam bar
-├── icons/            # Extension icons
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-└── README.md         # This file
-```
+## 🔒 Privacy
 
-## Usage
+- ✅ **100% runs in your browser** — nothing sent anywhere
+- ✅ **No API calls** — pure pattern matching
+- ✅ **No data collection** — your posts stay private
+- ✅ **Open source** — see exactly how it works
 
-1. **Automatic:** Extension runs automatically when you visit X/Twitter
-2. **Toggle:** Click extension icon → Toggle ON/OFF
-3. **Sensitivity:** Adjust slider for more/less aggressive filtering
-4. **View Hidden:** Click the grey "🔽 X spam replies hidden" bar to reveal
-5. **Reset:** Click "Reset Counter" to clear daily stats
+---
 
-## Privacy
+## 💡 Tips
 
-- ✅ **100% client-side** - No data leaves your browser
-- ✅ **No API calls** - Pure JavaScript pattern matching
-- ✅ **No tracking** - Only stores your settings locally
+- **Low sensitivity** = Only obvious spam (recommended to start)
+- **Medium sensitivity** = Balanced filtering
+- **High sensitivity** = Aggressive (may hide some real replies)
 
-## Permissions
+Click the extension icon to adjust settings anytime.
 
-- `activeTab` - To run on X/Twitter pages
-- `storage` - To save your settings locally
+---
 
-# x-spam-filter
+## 🐛 Issues?
+
+Not working? Try:
+1. Refresh the X page
+2. Make sure the extension is enabled in `chrome://extensions`
+3. Check that you're on x.com (not mobile app)
+
+---
+
+Made for creators who want cleaner comment sections. ✨
