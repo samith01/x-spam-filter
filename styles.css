@@ -1,0 +1,190 @@
+/* X Spam Filter - Content Script Styles */
+
+/* Hidden spam replies */
+.spam-hidden,
+.spam-hidden:hover,
+.spam-hidden:focus,
+.spam-hidden:active {
+  display: none !important;
+}
+
+/* Revealed spam replies (when toggled to show) */
+.spam-revealed,
+.spam-revealed:hover,
+.spam-revealed:focus,
+.spam-revealed:active {
+  opacity: 0.4 !important;
+  background-color: transparent !important;
+  position: relative !important;
+  border-left: 3px solid #f4212e !important;
+  overflow: visible !important;
+}
+
+/* Spam badge - injected via JS */
+.spam-badge {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: rgba(244, 33, 46, 0.95) !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  z-index: 9999 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Spam filter bar */
+.spam-filter-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 14px 16px !important;
+  margin: 0 !important;
+  background: rgba(29, 155, 240, 0.1) !important;
+  border: none !important;
+  border-bottom: 1px solid rgb(47, 51, 54) !important;
+  cursor: pointer !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: rgb(29, 155, 240) !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.spam-filter-bar:hover {
+  background: rgba(29, 155, 240, 0.15) !important;
+}
+
+.spam-filter-bar.spam-bar-revealed {
+  background: rgba(244, 33, 46, 0.1) !important;
+  color: #f4212e !important;
+}
+
+.spam-filter-bar.spam-bar-revealed:hover {
+  background: rgba(244, 33, 46, 0.15) !important;
+}
+
+.spam-bar-icon {
+  font-size: 16px !important;
+}
+
+.spam-bar-text {
+  font-weight: 500 !important;
+}
+
+/* Animation for new spam detections */
+@keyframes spam-detected {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.spam-hidden-animate {
+  animation: spam-detected 0.3s ease-out forwards;
+}
+
+/* Premium Toggle Switch */
+.spam-toggle-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(29, 155, 240, 0.1) !important;
+  padding: 4px 10px !important;
+  margin-left: 10px !important;
+  height: auto !important;
+  z-index: 10 !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  border-radius: 16px !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease !important;
+}
+
+.spam-toggle-container:hover {
+  background: rgba(29, 155, 240, 0.15) !important;
+}
+
+.spam-toggle-label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #e7e9ea !important;
+  user-select: none !important;
+  white-space: nowrap !important;
+}
+
+.spam-toggle-count {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background: #1d9bf0 !important;
+  padding: 1px 6px !important;
+  border-radius: 8px !important;
+  min-width: 16px !important;
+  text-align: center !important;
+}
+
+.spam-toggle-count.has-spam {
+  color: #fff !important;
+  background: #f4212e !important;
+}
+
+/* Toggle Switch */
+.spam-toggle-switch {
+  position: relative !important;
+  width: 36px !important;
+  height: 20px !important;
+  background: #536471 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  flex-shrink: 0 !important;
+}
+
+.spam-toggle-switch:hover {
+  background: #6b7a87 !important;
+}
+
+.spam-toggle-switch.active {
+  background: #1d9bf0 !important;
+}
+
+.spam-toggle-switch.active:hover {
+  background: #1a8cd8 !important;
+}
+
+/* Toggle Slider */
+.spam-toggle-slider {
+  position: absolute !important;
+  top: 2px !important;
+  left: 2px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.spam-toggle-switch.active .spam-toggle-slider {
+  transform: translateX(16px) !important;
+}
+
+/* Shield icon for toggle */
+.spam-toggle-icon {
+  font-size: 14px !important;
+  opacity: 0.8 !important;
+}

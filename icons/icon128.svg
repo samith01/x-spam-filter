@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="shieldGrad128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1D9BF0"/>
+      <stop offset="100%" style="stop-color:#0D8AD8"/>
+    </linearGradient>
+    <filter id="shadow128" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M64 8L16 24v32c0 28 20 52 48 60 28-8 48-32 48-60V24L64 8z" fill="url(#shieldGrad128)" stroke="#0A7BC2" stroke-width="3" filter="url(#shadow128)"/>
+  <!-- X mark with slight rounded corners -->
+  <path d="M42 38l22 22 22-22 7 7-22 22 22 22-7 7-22-22-22 22-7-7 22-22-22-22z" fill="white"/>
+</svg>
